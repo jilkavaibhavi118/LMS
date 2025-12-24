@@ -1,0 +1,140 @@
+
+/* --- ABOUT PAGE REDESIGN --- */
+
+.about-image-collage {
+    position: relative;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collage-img {
+    position: absolute;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.collage-img:hover {
+    transform: translateY(-5px);
+}
+
+.img-main {
+    width: 320px;
+    height: 450px;
+    z-index: 5;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.img-secondary-top {
+    width: 240px;
+    height: 200px;
+    right: 5%;
+    top: 5%;
+    z-index: 10;
+}
+
+.img-secondary-bottom {
+    width: 240px;
+    height: 200px;
+    right: 15%;
+    bottom: 5%;
+    z-index: 10;
+}
+
+/* Decorative Shapes */
+.shape-dots {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: radial-gradient(#3b82f6 2px, transparent 2px);
+    background-size: 15px 15px;
+    z-index: 1;
+    opacity: 0.3;
+}
+
+.dots-left-bottom {
+    left: 0;
+    bottom: 10%;
+}
+
+.dots-right-top {
+    right: 5%;
+    top: 0;
+}
+
+.shape-arc {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 30px solid #22d3ee;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 0 120px 0 0;
+    right: 0;
+    top: 15%;
+    z-index: 2;
+    opacity: 0.8;
+}
+
+.shape-rectangle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #fbbf24;
+    right: 5%;
+    top: 45%;
+    z-index: 2;
+    transform: rotate(15deg);
+}
+
+.shape-triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 45px solid #f87171;
+    right: 8%;
+    top: 55%;
+    z-index: 2;
+    transform: rotate(-10deg);
+}
+
+.shape-star {
+    position: absolute;
+    font-size: 60px;
+    color: #fbbf24;
+    right: 2%;
+    bottom: 10%;
+    z-index: 2;
+    animation: rotateStar 10s linear infinite;
+}
+
+@keyframes rotateStar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 991px) {
+    .about-image-collage {
+        height: 500px;
+        margin-top: 50px;
+    }
+    
+    .img-main {
+        width: 240px;
+        height: 350px;
+        left: 5%;
+    }
+    
+    .img-secondary-top, .img-secondary-bottom {
+        width: 180px;
+        height: 150px;
+    }
+}
